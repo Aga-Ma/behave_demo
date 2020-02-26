@@ -2,8 +2,8 @@
 
 Repository with demo code prepared for [behave workshop](https://aga-ma.github.io/behave_workshop/#/)
 
--[Behave demo](#behave-demo)
--[Feature files](#feature-files)
+- [Behave demo](#behave-demo)  
+- [Feature files](#feature-files)
 
 # Feature Files
 
