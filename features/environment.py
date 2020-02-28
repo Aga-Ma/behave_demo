@@ -1,14 +1,8 @@
-from selenium import webdriver
+from behave import use_fixture
+
+from fixtures import browser_chrome
 
 
-def before_scenario(context, scenario):
-    # Initialize ChromeDriver
-    context.driver = webdriver.Chrome("C:/drivers/chromedriver.exe")
-    # Wait implicitly for elements to be ready before attempting interactions
-    context.driver.implicitly_wait(10)
-
-
-def after_scenario(context, scenario):
-    context.driver.quit()
-
-
+def before_tag(context, tag):
+    if tag == "fixture.browser.chrome":
+        use_fixture(browser_chrome, context)

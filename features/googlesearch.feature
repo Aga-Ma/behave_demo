@@ -1,3 +1,4 @@
+@fixture.browser.chrome
 Feature: Google search
   As a user
   I'd like to search for some phrase
