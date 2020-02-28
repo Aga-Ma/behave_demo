@@ -21,6 +21,14 @@ def step_impl(context):
     page.search(context.text)
 
 
+@when('user do the search of "{phrase}"')
+def step_impl(context, phrase):
+    context.execute_steps(u"""
+            given a user visit google
+             when the user searches for the "{search}" phrase
+        """.format(search=phrase))
+
+
 @then('one of the results contains: "{expected_result}"')
 def step_impl(context, expected_result):
     page = ResultPage(context)

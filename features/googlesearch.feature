@@ -17,3 +17,7 @@ Feature: Google search
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
           """
     Then one of the results contains: "Wikipedia"
+
+  Scenario:  a user search something
+    When user do the search of "Dan North"
+    Then one of the results contains: "Introducing BDD"
