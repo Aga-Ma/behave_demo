@@ -11,15 +11,15 @@ def step_impl(context):
     page.load('http://www.google.com')
 
 
-@when('the user searches for the behave python phrase')
-def step_impl(context):
+@when('the user searches for the "{search}" phrase')
+def step_impl(context, search):
     page = SearchPage(context)
-    page.search('behave python')
+    page.search(search)
 
 
-@then('one of the results contains: Welcome to behave')
-def step_impl(context):
+@then('one of the results contains: "{expected_result}"')
+def step_impl(context, expected_result):
     page = ResultPage(context)
-    results = page.phrase_result_count('Welcome to behave')
+    results = page.phrase_result_count(expected_result)
     context.driver.quit()
     assert results > 0

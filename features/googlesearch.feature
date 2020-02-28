@@ -5,5 +5,5 @@ Feature: Google search
 
   Scenario:  a user can search for a phrase
     Given a user visit google
-    When the user searches for the behave python phrase
-    Then one of the results contains: Welcome to behave
+    When the user searches for the "behave python" phrase
+    Then one of the results contains: "Welcome to behave"
